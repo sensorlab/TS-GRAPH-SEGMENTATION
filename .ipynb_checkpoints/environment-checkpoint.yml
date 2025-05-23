@@ -1,0 +1,30 @@
+name: TSSB
+channels:
+  - pytorch      
+  - nvidia       
+  - conda-forge  
+  - pyg         
+  - anaconda    
+dependencies:
+  - python=3.11
+  - pyts                  
+  - pytorch=2.4           
+  - torchvision         
+  - torchaudio          
+  - pytorch-cuda=12.1     
+  - lightning           
+  - pyg
+  - numba        
+  - pip
+  - pip:
+      - ts2vg
+      - torchsummary
+      - dvclive
+      - "networkx[default]==3.2"  
+      - ordpy==1.2.0
+      - --find-links=https://data.pyg.org/whl/torch-2.4.0+cu121.html
+      - pyg-lib==0.4.0+pt24cu121
+      - tqdm
+      - deepsig==1.2.8
+      # Add the dataset package from GitHub:
+      - git+https://github.com/ermshaua/time-series-segmentation-benchmark.git#egg=tssb
